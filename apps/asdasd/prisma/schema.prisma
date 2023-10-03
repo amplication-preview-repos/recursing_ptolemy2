@@ -17,3 +17,11 @@ model User {
   updatedAt DateTime @updatedAt
   username  String   @unique
 }
+
+model Muly {
+  createdAt DateTime @default(now())
+  $fileAltImage Json?
+  $file_image Json?
+  id        String   @id @default(cuid())
+  updatedAt DateTime @updatedAt
+}
